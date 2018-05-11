@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 
+            Mathematics Assisstant project 
+        By Sina Honarvar and Farzam Ghafouri DEC 2017 - MAR 2018
+     -->
+    <title>Matrix Calculator | Matrix Assistant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  Start scripts -->
+    <script language="javascript" src="files/scripts/initial.js"></script>
+    <script language="javascript" src="files/scripts/design.js"></script>
+    <!-- Main script -->
+    <script language="javascript" src="../main.js"></script>
+    <script language="javascript" src="files/scripts/__main__.js"></script>
+    <script language="javascript" src="files/scripts/core.js"></script>
+    <script language="javascript" src="files/scripts/matrix.js"></script>
+    <!-- End Scripts -->
+
+    <!-- Start StyleSheets -->
+    <link rel="stylesheet" href="files/styles/base.css" type="text/css" />
+    <link rel="stylesheet" href="files/styles/matrix.css" type="text/css" />
+    <link rel="stylesheet" href="files/styles/fonts/import_fonts.css" type="text/css" />
+    <link rel="stylesheet" href="files/styles/fonts/Lato2OFLWeb/Lato2OFLWeb/Lato/latofonts.css" type="text/css" />
+    <!-- End StyleSheets-->
+
+</head>
+
+<body class="matrix">
+    <!-- Header Starts -->
+    <div class="header">
+        <button class="header" id="home" onclick='javascript:window.location="index.htm"'>Home</button>
+        <button class="header" id="list" onclick='javsacript:window.location="list.htm"'>List</button>
+        <button class="header" id="help" onclick='javascript:window.location="help.htm"'>Help</button>
+        <button class="header" id="about" onclick='javascript:window.location="about.htm"'>About</button>
+        <button class="header" id="exit" onclick='javascript:quit()'></button>
+        <button class="header" id="play-pause" onclick="javascript:playPauseSound();">Pause Sound</button>
+
+        <div class="cross" id="positive"></div>
+        <div class="cross" id="negative"></div>
+
+    </div>
+    <div class="time" id="time"></div>
+    <!-- Header End -->
+
+
+    <select name="operation" value="Operation" required="required" size="1" class="select_operation" id="select_op_menu" onchange="getOperation()">
+        <option class="default" value="0">--Select Operation--</option>
+        <option value="multiply">Multiply</option>
+        <option value="sum">Sum</option>
+        <option value="transpose">Transpose</option>
+        <option value="boolean_multiply">Boolean Multiply</option>
+        <option value="boolean_sum">Boolean Sum</option>
+        <option value="inverse">Inverse</option>
+    </select>
+
+    <button id="empty" onclick="resetMatrix();">Empty Matrices</button>
+    <button class="show_answer" onclick="showAnswer();" id="show_answer"><a style="z-index:10;" href="#answer_matrix">OK, Find The Answer</a></button>
+    <button id="add_answer" onclick="addAnswer();">Add Answer to First Matrix</button>
+    <button id="get_properties" onclick="getProperties();">Get Relation Properties</button>
+    <div id="properties"></div>
+
+
+    <!--            first matrix - - - - -->
+    <div class="matrix" id="first_matrix">
+        <!-- ROW 1 -->
+        <div class="row">
+            <div class="element" id="d-f00">
+                <input type="text" class="element_input" id="i-f00" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f01">
+                <input type="text" class="element_input" id="i-f01" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f02">
+                <input type="text" class="element_input" id="i-f02" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f03">
+                <input type="text" class="element_input" id="i-f03" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f04">
+                <input type="text" class="element_input" id="i-f04" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f05">
+                <input type="text" class="element_input" id="i-f05" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 2 -->
+        <div class="row">
+            <div class="element" id="d-f10">
+                <input type="text" class="element_input" id="i-f10" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f11">
+                <input type="text" class="element_input" id="i-f11" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f12">
+                <input type="text" class="element_input" id="i-f12" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f13">
+                <input type="text" class="element_input" id="i-f13" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f14">
+                <input type="text" class="element_input" id="i-f14" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f15">
+                <input type="text" class="element_input" id="i-f15" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 3 -->
+        <div class="row">
+            <div class="element" id="d-f20">
+                <input type="text" class="element_input" id="i-f20" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f21">
+                <input type="text" class="element_input" id="i-f21" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f22">
+                <input type="text" class="element_input" id="i-f22" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f23">
+                <input type="text" class="element_input" id="i-f23" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f24">
+                <input type="text" class="element_input" id="i-f24" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f25">
+                <input type="text" class="element_input" id="i-f25" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 4 -->
+        <div class="row">
+            <div class="element" id="d-f30">
+                <input type="text" class="element_input" id="i-f30" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f31">
+                <input type="text" class="element_input" id="i-f31" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f32">
+                <input type="text" class="element_input" id="i-f32" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f33">
+                <input type="text" class="element_input" id="i-f33" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f34">
+                <input type="text" class="element_input" id="i-f34" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f35">
+                <input type="text" class="element_input" id="i-f35" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 5 -->
+        <div class="row">
+            <div class="element" id="d-f40">
+                <input type="text" class="element_input" id="i-f40" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f41">
+                <input type="text" class="element_input" id="i-f41" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f42">
+                <input type="text" class="element_input" id="i-f42" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f43">
+                <input type="text" class="element_input" id="i-f43" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f44">
+                <input type="text" class="element_input" id="i-f44" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f45">
+                <input type="text" class="element_input" id="i-f45" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 6 -->
+        <div class="row">
+            <div class="element" id="d-f50">
+                <input type="text" class="element_input" id="i-f50" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f51">
+                <input type="text" class="element_input" id="i-f51" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f52">
+                <input type="text" class="element_input" id="i-f52" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f53">
+                <input type="text" class="element_input" id="i-f53" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f54">
+                <input type="text" class="element_input" id="i-f54" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-f55">
+                <input type="text" class="element_input" id="i-f55" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- END First Matrix -->
+    </div>
+
+
+
+
+    <!--            second matrix -->
+    <div class="matrix" id="second_matrix">
+        <!-- ROW 1 -->
+        <div class="row">
+            <div class="element" id="d-s00">
+                <input type="text" class="element_input" id="i-s00" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s01">
+                <input type="text" class="element_input" id="i-s01" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s02">
+                <input type="text" class="element_input" id="i-s02" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s03">
+                <input type="text" class="element_input" id="i-s03" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s04">
+                <input type="text" class="element_input" id="i-s04" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s05">
+                <input type="text" class="element_input" id="i-s05" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 2 -->
+        <div class="row">
+            <div class="element" id="d-s10">
+                <input type="text" class="element_input" id="i-s10" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s11">
+                <input type="text" class="element_input" id="i-s11" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s12">
+                <input type="text" class="element_input" id="i-s12" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s13">
+                <input type="text" class="element_input" id="i-s13" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s14">
+                <input type="text" class="element_input" id="i-s14" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s15">
+                <input type="text" class="element_input" id="i-s15" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 3 -->
+        <div class="row">
+            <div class="element" id="d-s20">
+                <input type="text" class="element_input" id="i-s20" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s21">
+                <input type="text" class="element_input" id="i-s21" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s22">
+                <input type="text" class="element_input" id="i-s22" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s23">
+                <input type="text" class="element_input" id="i-s23" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s24">
+                <input type="text" class="element_input" id="i-s24" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s25">
+                <input type="text" class="element_input" id="i-s25" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 4 -->
+        <div class="row">
+            <div class="element" id="d-s30">
+                <input type="text" class="element_input" id="i-s30" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s31">
+                <input type="text" class="element_input" id="i-s31" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s32">
+                <input type="text" class="element_input" id="i-s32" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s33">
+                <input type="text" class="element_input" id="i-s33" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s34">
+                <input type="text" class="element_input" id="i-s34" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s35">
+                <input type="text" class="element_input" id="i-s35" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 5 -->
+        <div class="row">
+            <div class="element" id="d-s40">
+                <input type="text" class="element_input" id="i-s40" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s41">
+                <input type="text" class="element_input" id="i-s41" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s42">
+                <input type="text" class="element_input" id="i-s42" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s43">
+                <input type="text" class="element_input" id="i-s43" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s44">
+                <input type="text" class="element_input" id="i-s44" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s45">
+                <input type="text" class="element_input" id="i-s45" />
+                <div class="underline"></div>
+            </div>
+        </div>
+        <!-- ROW 6 -->
+        <div class="row">
+            <div class="element" id="d-s50">
+                <input type="text" class="element_input" id="i-s50" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s51">
+                <input type="text" class="element_input" id="i-s51" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s52">
+                <input type="text" class="element_input" id="i-s52" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s53">
+                <input type="text" class="element_input" id="i-s53" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s54">
+                <input type="text" class="element_input" id="i-s54" />
+                <div class="underline"></div>
+            </div>
+            <div class="element" id="d-s55">
+                <input type="text" class="element_input" id="i-s55" />
+                <div class="underline"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END Second Matrix -->
+
+
+    <!-- Start Answer Matrix -->
+
+    <div class="matrix" id="answer_matrix">
+        <!-- ROW 1 -->
+        <div class="row">
+            <div class="element" id="d-a00">
+                <input type="text" class="element_input" readonly="readonly" id="i-a00" />
+
+            </div>
+            <div class="element" id="d-a01">
+                <input type="text" class="element_input" readonly="readonly" id="i-a01" />
+
+            </div>
+            <div class="element" id="d-a02">
+                <input type="text" class="element_input" readonly="readonly" id="i-a02" />
+
+            </div>
+            <div class="element" id="d-a03">
+                <input type="text" class="element_input" readonly="readonly" id="i-a03" />
+
+            </div>
+            <div class="element" id="d-a04">
+                <input type="text" class="element_input" readonly="readonly" id="i-a04" />
+
+            </div>
+            <div class="element" id="d-a05">
+                <input type="text" class="element_input" readonly="readonly" id="i-a05" />
+
+            </div>
+        </div>
+        <!-- ROW 2 -->
+        <div class="row">
+            <div class="element" id="d-a10">
+                <input type="text" class="element_input" readonly="readonly" id="i-a10" />
+
+            </div>
+            <div class="element" id="d-a11">
+                <input type="text" class="element_input" readonly="readonly" id="i-a11" />
+
+            </div>
+            <div class="element" id="d-a12">
+                <input type="text" class="element_input" readonly="readonly" id="i-a12" />
+
+            </div>
+            <div class="element" id="d-a13">
+                <input type="text" class="element_input" readonly="readonly" id="i-a13" />
+
+            </div>
+            <div class="element" id="d-a14">
+                <input type="text" class="element_input" readonly="readonly" id="i-a14" />
+
+            </div>
+            <div class="element" id="d-a15">
+                <input type="text" class="element_input" readonly="readonly" id="i-a15" />
+
+            </div>
+        </div>
+        <!-- ROW 3 -->
+        <div class="row">
+            <div class="element" id="d-a20">
+                <input type="text" class="element_input" readonly="readonly" id="i-a20" />
+
+            </div>
+            <div class="element" id="d-a21">
+                <input type="text" class="element_input" readonly="readonly" id="i-a21" />
+
+            </div>
+            <div class="element" id="d-a22">
+                <input type="text" class="element_input" readonly="readonly" id="i-a22" />
+
+            </div>
+            <div class="element" id="d-a23">
+                <input type="text" class="element_input" readonly="readonly" id="i-a23" />
+
+            </div>
+            <div class="element" id="d-a24">
+                <input type="text" class="element_input" readonly="readonly" id="i-a24" />
+
+            </div>
+            <div class="element" id="d-a25">
+                <input type="text" class="element_input" readonly="readonly" id="i-a25" />
+
+            </div>
+        </div>
+        <!-- ROW 4 -->
+        <div class="row">
+            <div class="element" id="d-a30">
+                <input type="text" class="element_input" readonly="readonly" id="i-a30" />
+
+            </div>
+            <div class="element" id="d-a31">
+                <input type="text" class="element_input" readonly="readonly" id="i-a31" />
+
+            </div>
+            <div class="element" id="d-a32">
+                <input type="text" class="element_input" readonly="readonly" id="i-a32" />
+
+            </div>
+            <div class="element" id="d-a33">
+                <input type="text" class="element_input" readonly="readonly" id="i-a33" />
+
+            </div>
+            <div class="element" id="d-a34">
+                <input type="text" class="element_input" readonly="readonly" id="i-a34" />
+
+            </div>
+            <div class="element" id="d-a35">
+                <input type="text" class="element_input" readonly="readonly" id="i-a35" />
+
+            </div>
+        </div>
+        <!-- ROW 5 -->
+        <div class="row">
+            <div class="element" id="d-a40">
+                <input type="text" class="element_input" readonly="readonly" id="i-a40" />
+
+            </div>
+            <div class="element" id="d-a41">
+                <input type="text" class="element_input" readonly="readonly" id="i-a41" />
+
+            </div>
+            <div class="element" id="d-a42">
+                <input type="text" class="element_input" readonly="readonly" id="i-a42" />
+
+            </div>
+            <div class="element" id="d-a43">
+                <input type="text" class="element_input" readonly="readonly" id="i-a43" />
+
+            </div>
+            <div class="element" id="d-a44">
+                <input type="text" class="element_input" readonly="readonly" id="i-a44" />
+
+            </div>
+            <div class="element" id="d-a45">
+                <input type="text" class="element_input" readonly="readonly" id="i-a45" />
+
+            </div>
+        </div>
+        <!-- ROW 6 -->
+        <div class="row">
+            <div class="element" id="d-a50">
+                <input type="text" class="element_input" readonly="readonly" id="i-a50" />
+
+            </div>
+            <div class="element" id="d-a51">
+                <input type="text" class="element_input" readonly="readonly" id="i-a51" />
+
+            </div>
+            <div class="element" id="d-a52">
+                <input type="text" class="element_input" readonly="readonly" id="i-a52" />
+
+            </div>
+            <div class="element" id="d-a53">
+                <input type="text" class="element_input" readonly="readonly" id="i-a53" />
+
+            </div>
+            <div class="element" id="d-a54">
+                <input type="text" class="element_input" readonly="readonly" id="i-a54" />
+
+            </div>
+            <div class="element" id="d-a55">
+                <input type="text" class="element_input" readonly="readonly" id="i-a55" />
+
+            </div>
+        </div>
+
+
+        <div id="det">
+            <div id="one">1</div>
+            <div id="fraction_line"></div>
+            <div id="det_num">6</div>
+            <div id="multiply_sign">*</div>
+        </div>
+
+    </div>
+
+    <!-- End Answer Matrix -->
+
+
+    <div id="back_operation">
+        <p id="show_operation">Operation</p>
+    </div>
+
+    <div id="dark_screen">
+        <div id="alert" onclick="hideAlert();">
+            <div id="alert_title">ERROR TEST</div>
+            <div id="alert_detail">Error Detail...</div>
+
+            <button id="alert_exit_text" onclick="hideAlert();">OK! Got It</button>
+            <div id="alert_line"></div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
