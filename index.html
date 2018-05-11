@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome | Matrix Assistant</title>
+    <script type="text/javascript" language="javascript" src="main.js"></script>
+    <script language="javascript" src="app/files/scripts/__main__.js"></script>
+    <script language="javascript">
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function init() {
+            await sleep(1000);
+        }
+
+        function goToHome() {
+            window.location = "app/index.htm";
+
+        }
+
+        init();
+    </script>
+    <style>
+        body.welcome {
+            background-color: #24053a;
+        }
+        
+        p#welcome {
+            text-align: center;
+            position: absolute;
+            left: 300px;
+            right: 300px;
+            top: 30px;
+            font-family: "wf_segoe-ui_light";
+            font-size: 65px;
+            color: white;
+        }
+        /* FONT-Names:
+                1. "wf_segoe-ui_light"
+                2. "segoe-ui_light"
+                3. arapey
+                4. "frutiger bold"
+                5. "frutiger-light" 
+                6. "helvetica"
+                
+                
+        
+        p#welcome2 {
+            text-align: center;
+            position: absolute;
+            left: 300px;
+            right: 300px;
+            top: 70px;
+            font-family: arapey;
+            font-size: 65px;
+            color: white;
+        }
+        */
+        
+        button#gotohome {
+            position: absolute;
+            bottom: 100px;
+            left: 35%;
+            right: 35%;
+            height: 160px;
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0);
+            color: white;
+            border: solid 2px white;
+            font-family: 'LatoWebThin', "LatoWebHeavy", 'LatoWebLight';
+            font-size: 54px;
+        }
+        
+        div#exit {
+            position: absolute;
+            height: 150px;
+            width: 200px;
+            right: 0px;
+            top: 0px;
+            border: none;
+            border-right: none;
+            border-top: none;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        
+        div.cross {
+            position: absolute;
+            height: 2px;
+            width: 75px;
+            top: 75px;
+            right: 50px;
+            border: none;
+            background-color: white;
+        }
+        
+        div#cross_positive {
+            transform: rotate(45deg);
+        }
+        
+        div#cross_negative {
+            transform: rotate(135deg);
+        }
+    </style>
+    <link rel="stylesheet" href="app/files/styles/fonts/import_fonts.css" />
+    <link rel="stylesheet" href="app/files/styles/fonts/Lato2OFLWeb/Lato2OFLWeb/Lato/latofonts.css" />
+</head>
+
+<body class="welcome">
+    <p id="welcome">Welcome</p>
+
+    <button id="gotohome" onclick="goToHome();">
+        Let's Start
+    </button>
+    <div id="exit" onclick="quit()"></div>
+    <div class="cross" id="cross_positive"></div>
+    <div class="cross" id="cross_negative"></div>
+</body>
+
+</html>

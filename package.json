@@ -1,0 +1,12 @@
+{
+    "name": "Matrix_Assistant",
+    "main": "main.js",
+    "version": "0.1",
+    "productName": "Matrix Assistant For Schools",
+    "description": "Teaching Assistant for Matrix",
+    "scripts": {
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    }
+}
