@@ -1,0 +1,116 @@
+/*Mathematics Assisstant project 
+        By Sina Honarvar and Farzam Ghafouri DEC 2017 - MAR 2018*/
+
+div.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #2b043d;
+    padding: 25px;
+    z-index: 10;
+}
+
+button.header {
+    position: fixed;
+    background-color: #2b043d;
+    border: 0px;
+    color: white;
+    height: 50px;
+    width: 100px;
+    border-style: hidden;
+    padding: 2px, 4px;
+    text-align: center;
+    display: inline-block;
+    /*  -----------         To Be Reviewed -------------
+    font-size: 22px;
+    font-family: "wf_segoe-ui_light";
+    font-style: bold;
+    */
+    font-size: 16px;
+    /*For Basic Font probably Arial*/
+    z-index: 11;
+}
+
+button.header:hover {
+    background-color: #24053a;
+}
+
+button.header:active {
+    background-color: #280636;
+}
+
+button.header#home {
+    top: 0px;
+    left: 0px;
+}
+
+button.header#list {
+    top: 0px;
+    left: 100px;
+    display: none;
+}
+
+button.header#help {
+    top: 0px;
+    left: 100px;
+}
+
+button.header#exit {
+    top: 0px;
+    right: 0px;
+}
+
+button.header#about {
+    top: 0px;
+    left: 200px;
+}
+
+button.header#play-pause {
+    display: none;
+    top: 0px;
+    right: 100px;
+    font-size: 14px;
+}
+
+div.header>div.cross {
+    position: fixed;
+    z-index: 12;
+    background-color: white;
+    top: 25px;
+    right: 37px;
+    width: 25px;
+    height: 2px;
+}
+
+div.cross#positive {
+    transform: rotate(45deg);
+}
+
+div.cross#negative {
+    transform: rotate(135deg);
+}
+
+div.time#time {
+    position: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 25px;
+    width: 10%;
+    left: 600px;
+    top: 14px;
+    z-index: 13;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    color: white;
+}
+
+div.header>div.under_cross {
+    position: fixed;
+    display: none;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(146, 39, 143, 1);
+    z-index: 10;
+}

@@ -1,0 +1,186 @@
+   /*Mathematics Assisstant project 
+        By Sina Honarvar and Farzam Ghafouri DEC 2017 - MAR 2018*/
+   /*
+              Home style : 
+                    This file is style for home page """First-Directory/index.htm"""
+        */
+   /*        border-color: red;
+        border-style: solid;
+        border-width: 3px;*/
+   
+   body.home {
+       /*background-color: #222222;
+    background-image:url("images\\Untitled.png");
+    background-repeat: no-repeat;
+	
+	background:radial-gradient(rgb(140,65,55) 10%, rgb(40,25,60) 90%);*/
+       /*background: linear-gradient(to right, #d9bcf7 70%, #bf99e7 15%);
+        background-color: #dfdff0;*/
+       background-image: linear-gradient(to right, #bfbfdf, #dfdff0, #bfbfdf);
+       background-attachment: fixed;
+       background-repeat: no-repeat;
+   }
+   
+   div.line {
+       background-color: #2b043d;
+       position: absolute;
+   }
+   
+   div.line#horizontal_start {
+       top: 100px;
+       height: 1px;
+       width: 450px;
+       left: 0px;
+       transition: all 0.5s ease-out;
+       display: none;
+   }
+   
+   h1.welcome {
+       position: relative;
+       font-size: 60px;
+       font-family: 'LatoWebHeavy', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       color: #2b043d;
+       top: 4px;
+       left: 5px;
+       transition: all 0.5s ease-out;
+       display: none;
+   }
+   
+   div.button_border {
+       left: 150px;
+       position: absolute;
+       z-index: 4;
+       width: 153px;
+       height: 63px;
+       background-image: linear-gradient(to right, #6454b5, #d53767);
+       transition: all 1s ease-out;
+       border-radius: 6px;
+   }
+   
+   div.button_border:hover {
+       background-image: linear-gradient(to right, #db712e, #eaca15, #7a9431);
+       left: 125px;
+   }
+   
+   div.button_border#matrix_border {
+       top: 160px;
+   }
+   
+   div.button_border#vector_border {
+       top: 260px;
+   }
+   
+   div.button_border#graph_border {
+       top: 360px;
+   }
+   
+   button.main_menu {
+       position: relative;
+       z-index: 10;
+       width: 145px;
+       height: 55px;
+       background-color: #e9e6ff;
+       top: 4px;
+       left: 4px;
+       right: 4px;
+       bottom: 4px;
+       border-width: 0px;
+       border-style: solid;
+       border-style: none;
+       border-radius: 4px;
+       transition: all 0.5s ease-out;
+       overflow: hidden;
+       display: inline-block;
+       color: #333;
+       font-size: 28px;
+       font-family: 'LatoWebLight', "LatoWebThin", 'Tangerine', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   
+   button.main_menu:hover {
+       background-color: #cfcff0;
+   }
+   
+   div.details {
+       position: absolute;
+       width: 600px;
+       height: 200px;
+       background-color: transparent;
+       border-width: 1px;
+       border-style: solid;
+       border-color: transparent;
+       left: 315px;
+       display: none;
+       transition: all 0.2s ease-in;
+   }
+   
+   div.details#matrix_details {
+       top: 100px;
+   }
+   
+   div.details#vector_details {
+       top: 225px;
+   }
+   
+   div.details#graph_details {
+       top: 300px;
+   }
+   
+   div.opening_lines {
+       position: absolute;
+       display: none;
+       width: 100px;
+       height: 100px;
+       left: 5px;
+       top: 35px;
+       transform: rotate(45deg);
+       border-style: solid;
+       border-width: 1px;
+       border-color: #2b043d;
+       border-top-style: none;
+       border-right-style: none;
+   }
+   
+   div.description {
+       position: absolute;
+       background-color: transparent;
+       top: 0px;
+       left: -10px;
+       font-family: "LatoWebThin", "LatoWebHairline";
+       font-size: 25px;
+       line-height: 35px;
+       color: #443344
+   }
+   
+   div.horizontal {
+       position: absolute;
+       top: 10%;
+       bottom: 0%;
+       left: 65%;
+       width: 40%;
+       height: 88%;
+       background-color: rgba(200, 220, 200, 0);
+   }
+   
+   h3#title {
+       font-family: "LatoWebHeavy";
+       font-size: 28px;
+       color: #2b043d;
+   }
+   
+   p#about_us {
+       font-family: "LatoWebLight";
+       font-style: italic;
+   }
+   
+   span#name {
+       font-style: bold;
+       font-size: +30px;
+   }
+   
+   p#homepage_help {
+       position: absolute;
+       bottom: 0px;
+       font-family: "Bookman Old Style";
+       font-size: 12px;
+       right: 120px;
+   }

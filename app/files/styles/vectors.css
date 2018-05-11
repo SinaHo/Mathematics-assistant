@@ -1,0 +1,84 @@
+/*Mathematics Assisstant project 
+        By Sina Honarvar and Farzam Ghafouri DEC 2017 - MAR 2018*/
+
+body {
+    background-image: linear-gradient(to right, #bfbfdf, #dfdff0, #bfbfdf);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+div#enter_vectors {
+    position: absolute;
+    width: 700px;
+    height: 100px;
+    left: 20px;
+    top: 70px;
+    border: none;
+}
+
+div.vectors {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    height: 50px;
+    border: none;
+}
+
+div#enter_v1 {
+    top: 0px;
+}
+
+div#enter_v2 {
+    top: 60px;
+}
+
+div.input_vector_name {
+    position: absolute;
+    width: 40px;
+    top: 0px;
+    left: 0px;
+    color: #2b043d;
+}
+
+input.vector {
+    position: relative;
+    width: 20px;
+    left: 60px;
+    top: -10px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: solid 2px #2b043d;
+    color: black;
+    text-align: center;
+}
+
+button#calculate {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    top: 83px;
+    left: 300px;
+    background-color: #2b043d;
+    border-radius: 2px;
+    border: solid 1px rgba(255, 255, 255, 0.15);
+    font-size: 16px;
+    color:white;
+}
+
+div#answers {
+    position: absolute;
+    display: none;
+    width: 700px;
+    height: 90%;
+    top: 50px;
+    left: 500px;
+    border: none;
+    border-left: solid 4px #2b043d;
+    font-size: 26px;
+}
+
+span.ans {
+    position: relative;
+    left: 20px;
+}

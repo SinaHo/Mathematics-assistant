@@ -1,0 +1,97 @@
+/*
+Mathematics Assisstant project 
+        By Sina Honarvar and Farzam Ghafouri DEC 2017 - MAR 2018*/
+
+@font-face {
+    font-family: 'Tangerine';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Tangerine Regular'), local('Tangerine-Regular'), url(Tangerine.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/* Start segoe 
+@font-face {
+  font-family: "wf_segoe-ui_light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Light"), local("Segoe WP Light"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "wf_segoe-ui_light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Light"), local("Segoe WP Light"), url("segoe-ui-light.eot") format("embedded-opentype")
+}
+
+
+@font-face {
+  font-family: "wf_segoe-ui_light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("segoe-ui-light.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-family: "segoe-ui_light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("segoe-ui-light/segoeuil.ttf") format("truetype");
+}*/
+
+
+/*
+@font-face {
+  font-family: "segoe-ui_light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("segoe/segoeuil.ttf") format("truetype");
+}*/
+
+@font-face {
+    font-family: "wf_segoe-ui_light";
+    font-style: normal;
+    font-weight: normal;
+    src: url("segoe/segoeuil.ttf") format("truetype");
+}
+
+
+/* End Segoe */
+
+@font-face {
+    font-family: "arapey";
+    font-style: normal;
+    font-weight: normal;
+    src: url("arapey/arapey-v6-latin-regular.ttf") format("truetype"), url("arapey/arapey-v6-latin-regular.woff") format("woff"), url("arapey-v6-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "frutiger bold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("frutiger/FTB.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "frutiger-light";
+    font-style: normal;
+    font-weight: normal;
+    src: url("frutiger-light/unicode.frutigel.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "helvetica";
+    font-style: normal;
+    font-weight: normal;
+    src: url("helveticaneue-lt-45-light/Helvetica LT 45 Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "baran";
+    font-style: normal;
+    font-weight: normal;
+    src: url("F_baran.ttf") format("truetype");
+}

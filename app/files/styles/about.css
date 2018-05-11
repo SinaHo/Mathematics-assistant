@@ -1,0 +1,122 @@
+/*Mathematics Assisstant project 
+        By Sina Honarvar and Farzam Ghafouri DEC 2017 - MAR 2018*/
+
+body.about {
+    /*
+    background-image: linear-gradient(to right, #acaccc, #dcdced, #acaccc);
+    background-attachment: fixed;*/
+    background-color: #fef;
+    background-repeat: no-repeat;
+}
+
+ul.title {
+    font-family: "LatoWebHeavy";
+    font-size: 28px;
+    color: #2b043d;
+    position: absolute;
+    top: 0px;
+}
+
+div.title {
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    background-color: transparent;
+    top: 50px;
+    left: -10px;
+}
+
+div.description {
+    position: absolute;
+    width: 90%;
+    height: 70%;
+}
+
+div.description#persian {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 6%;
+    border: solid 2px #2b043d;
+    border-top: none;
+    border-bottom: solid 3px #2b043d;
+    font-family: baran
+}
+
+div#persian>p.details {
+    position: absolute;
+    direction: rtl;
+    right: 5px;
+    color: black;
+}
+
+p.footer {
+    position: absolute;
+    font-family: "LatoWebLight";
+    font-style: italic;
+    bottom: 2px;
+    left: 30px;
+    right: 30px;
+}
+
+a#github:link {
+    text-decoration: underline;
+    color: #202;
+}
+
+a#github:hover {
+    font-style: bold;
+    color: #424;
+}
+
+a#github:visited {
+    color: #313;
+}
+
+a#github:active {
+    color: #424;
+}
+
+div#contact {
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    width: 30%;
+    height: 100px;
+    bottom: 0px;
+    right: 0px;
+    border: none;
+    z-index: 200;
+}
+
+div#contact_text {
+    position: absolute;
+    width: 20%;
+    height: 20px;
+    right: 40px;
+    top: 0px;
+}
+
+div#contact_line {
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    right: 10%;
+    left: 0px;
+    top: 30px;
+    border: none;
+    background-color: #2b043d;
+}
+
+div#contact_mail {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    font-style: underline;
+}
+
+a#mail {
+    color: #201;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

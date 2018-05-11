@@ -1,0 +1,32 @@
+/*Mathematics Assisstant project 
+        By Sina Honarvar and Farzam Ghafouri DEC 2017 - MAR 2018*/
+
+body.help {
+    background-image: linear-gradient(to right, #acaccc, #dcdced, #acaccc);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    direction: rtl;
+}
+
+div#main_help {
+    position: absolute;
+    width: 80%;
+    height: 150%;
+    left: 10%;
+    right: 10%;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid #240b32 1px;
+    border-top: none;
+    border-bottom: 2px;
+    font-family: baran;
+}
+
+div#main_help_text {
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    top: -10px;
+}
